@@ -1,0 +1,19 @@
+body {
+    color: #000000;
+    font: 50px Tahoma, sans-serif;
+    background: #ffffff;
+    margin: 0px;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap
+}
+
+header {
+    font: clamp(16px, 5vw, 50px) Tahoma, sans-serif;
+    height: clamp(16px, 50%, 80px);
+    width: auto;
+    background-color: #393939;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 125px;
+}
