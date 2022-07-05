@@ -1,3 +1,4 @@
+//pkill -f node - ввести в терминал при ошибке
 require('dotenv').config()
 const express = require('express')
 
