@@ -1,9 +1,0 @@
-body {
-    color: #000000;
-    font: 50px Tahoma, sans-serif;
-    background: #ffffff;
-    margin: 0px;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: nowrap
-}
