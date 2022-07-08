@@ -10,4 +10,4 @@
 ## python manage.py createsuperuser
 
 # Launch
-## Enter your browser http://localhost:8000/. You can login via admin in http://localhost:8000/admin/.
+## Enter your browser http://localhost:8000/. You can login admin in http://localhost:8000/admin/.
