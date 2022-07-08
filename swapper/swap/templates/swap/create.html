@@ -1,0 +1,17 @@
+{% extends 'swap/base.html'  %}
+
+
+{% block title %}
+Создать таск
+{% endblock %}
+
+{% block content %}
+    <h1>Создать таск </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.tasks }}<br>
+        <button type="submit" class="bin-success">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
