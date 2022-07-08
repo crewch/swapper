@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Post
 from .forms import PostForm
+from django.urls import reverse_lazy
+from django.contrib.auth.forms import UserCreationForm
+from django.views.generic.edit import CreateView
 
 def index(request):
     tasks = Post.objects.all()
@@ -25,3 +28,8 @@ def create(request):
         'error': error,
     }
     return render(request, 'swap/create.html', context)
+
+class SignUp(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy("login")
+    template_name = "registration/signup.html"
