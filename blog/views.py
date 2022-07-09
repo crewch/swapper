@@ -95,7 +95,7 @@ def add_comment(request, pk):
         user = User.objects.get(id=request.POST.get('user_id'))
         text = request.POST.get('text')
         Comment(author=user, post=post, text=text).save()
-        messages.success(request, "Your comment has been added successfully.")
+        messages.success(request, "Ваш комментарий был успешно добавлен.")
     else:
         return redirect('post_detail', pk=pk)
     return redirect('post_detail', pk=pk)
