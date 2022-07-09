@@ -11,7 +11,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(
-                request, "Your account has been created! Your ar now able to login.")
+                request, "Ваша учетная запись создана! Теперь вы можете войти в систему.")
             return redirect('login')
     else:
         form = UserRegisterForm()
@@ -28,7 +28,7 @@ def profile(request):
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()
-            messages.success(request, "Your account has been updated!")
+            messages.success(request, "Ваша учетная запись была обновлена!")
             return redirect('profile')
 
     else:

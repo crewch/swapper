@@ -23,14 +23,15 @@
 
   <!-- Custom Style -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
-  {% if title %}
+  <!-- {% if title %}
   <title>Django Blog - {{ title }}</title>
   {% else %}
   <title>Django Blog</title>
-  {% endif %}
+  {% endif %} -->
+  <title>Swapper</title>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-white fixed-top">
       <div class="container">
         <a class="navbar-brand mr-4" href="{% url 'index' %}">
-            <img src = /media/logo.png height="50" alt = "swapper"></a>
+          <img src=/media/logo.png height="50" alt="swapper"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
           aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -51,7 +52,8 @@
           <!-- Navbar Right Side -->
           <div class="navbar-nav">
             {% if user.is_authenticated %}
-            <a class="nav-item nav-link" href="{% url 'post_create' %}"><i class="fi fi-br-refresh"></i> Предложить обмен</a>
+            <a class="nav-item nav-link" href="{% url 'post_create' %}"><i class="fi fi-br-refresh"></i> Предложить
+              обмен</a>
             <a class="nav-item nav-link" href="{% url 'profile' %}"><i class="fi fi-br-user"></i> Личный кабинет</a>
             <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fi fi-br-exit"></i> Выйти</a>
             {% else %}
@@ -96,10 +98,10 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-- Optional JavaScript -->
   <script src="{% static 'js/main.js' %}"></script>
