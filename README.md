@@ -1,6 +1,5 @@
 # Must be done
 
-## git clone https://github.com/crewch/swapper.git
 ## pip install -r requirements.txt
 
 # else
