@@ -1,10 +1,11 @@
 {% extends "blog/base.html" %}
 {% block content %}
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 <!-- Search Form -->
 <form class="form-inline my-2 my-lg-0 pb-2">
     <input class="form-control mr-sm-2" name="q" type="search" placeholder="Поиск" aria-label="Search" style="width: 400px">
     <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Поиск">
-</form> 
+</form>
     {% for post in posts %}
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
@@ -21,8 +22,8 @@
     {% endfor %}
     {% if is_paginated %}
       {% if page_obj.has_previous %}
-        <a class="btn btn-outline-info mb-4" href="?page=1">Первая</a>
-        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+        <a class="btn btn-outline-info mb-4" href="?page=1"><i class="fi fi-sr-angle-double-left"></i></a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}"><i class="fi fi-sr-angle-left"></i></a>
       {% endif %}
 
       {% for num in page_obj.paginator.page_range %}
@@ -34,8 +35,8 @@
       {% endfor %}
 
       {% if page_obj.has_next %}
-        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Следующая</a>
-        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Последняя</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}"><i class="fi fi-sr-angle-right"></i></a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}"><i class="fi fi-sr-angle-double-right"></i></a>
       {% endif %}
     {% endif %}
 {% endblock content %}

@@ -16,14 +16,9 @@ class PostManager(models.Manager):
 
 
 class Post(models.Model):
-    author = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-###############################
-
     image = models.ImageField(default='imgs_from_posts/default.jpg', upload_to='imgs_from_posts')
-
-###############################
     content = models.TextField()
     liked = models.ManyToManyField(
         settings.AUTH_USER_MODEL, blank=True, related_name='liked')
@@ -37,8 +32,6 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
-##########################################   
-
     def save(self, *args, **kwargs):
         super(Post, self).save(*args, **kwargs)
 
@@ -48,8 +41,6 @@ class Post(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
-
-##########################################  
 
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'pk': self.pk})
