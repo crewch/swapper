@@ -2,8 +2,15 @@
 
 ## git clone https://github.com/crewch/swapper.git
 ## pip install -r requirements.txt
+
+# else
+
+## pip install django-crispy-forms
+## pip install Pillow
+## pip install djangorestframework
+## pip install django
+
 ## python manage.py migrate
-## python manage.py collectstatic
 
 # Create superuser
 
