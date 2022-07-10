@@ -1,22 +1,34 @@
 # Must be done
+## Download 
+``` git clone https://github.com/crewch/swapper.git```
 
-## pip install -r requirements.txt
+## Create
 
-# else
+``` pip install -r requirements.txt ```
 
-## pip install django-crispy-forms
-## pip install Pillow
-## pip install djangorestframework
-## pip install django
+## If don`t working ->
 
-## python manage.py migrate
+```
+pip install django-crispy-forms
+pip install Pillow
+pip install djangorestframework
+pip install django
+```
+## Migrate
 
-# Create superuser
+```
+python manage.py makemigrations
+python manage.py migrate 
+```
 
-## python manage.py createsuperuser
+## Create superuser
 
-# Launch
+``` python manage.py createsuperuser ```
 
-## Enter your browser http://localhost:8000/
-## You can login admin in http://localhost:8000/admin/
+## Launch
+
+```
+Enter your browser http://localhost:8000/
+You can login admin in http://localhost:8000/admin/
+```
 
