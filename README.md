@@ -28,6 +28,7 @@ python manage.py migrate
 ## Launch
 
 ```
+python manage.py runserver
 Enter your browser http://localhost:8000/
 You can login admin in http://localhost:8000/admin/
 ```
